@@ -19,9 +19,21 @@ int main() {
          int sz=mylist.size();
             if (V < 0 || V >= sz) 
             {
-                cout << "Invalid"<<endl;
+                cout << "L -> ";
+                for (int val : mylist) {
+                     cout << val << " ";
+                    }
+                 cout << endl;
+        
+                  mylist.reverse();
+                 cout << "R -> ";
+                 for (int num: mylist) {
+                    cout << num << " ";
+                  }
+                    cout << endl;
+                  mylist.reverse();
                 continue;
-            } 
+              } 
             else {
                 auto it = mylist.begin();
                 for (int i = 0; i < V; i++) {
@@ -36,13 +48,16 @@ int main() {
             cout << val << " ";
         }
         cout << endl;
-
+        
+        mylist.reverse();
         cout << "R -> ";
-        for (auto it = mylist.rbegin(); it != mylist.rend(); it++) {
-            cout << *it << " ";
+        for (int num: mylist) {
+            cout << num << " ";
         }
         cout << endl;
+        mylist.reverse();
     }
+    
 
     return 0;
 }
